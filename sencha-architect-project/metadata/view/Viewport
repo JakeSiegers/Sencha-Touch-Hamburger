@@ -1,0 +1,84 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "Viewport",
+        "itemId": "Viewport",
+        "layout": "fit"
+    },
+    "name": "MyContainer",
+    "designerId": "74357486-26ea-4d4a-a7ca-1743f854ef9c",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "hamburger-mask"
+                ],
+                "hidden": true,
+                "itemId": "hamburgerMask"
+            },
+            "name": "MyContainer4",
+            "designerId": "1240c359-13ed-4668-8e74-2760e4266e06",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onHamburgerMaskShow",
+                        "implHandler": [
+                            "component.element.on({",
+                            "    touchstart: function() { Ext.ComponentQuery.query('#MainView')[0].closeHamburgerMenu(); }",
+                            "});"
+                        ],
+                        "name": "show"
+                    },
+                    "name": "onHamburgerMaskShow",
+                    "designerId": "5cb56566-9aa1-4de0-b1b1-7b0da0af2b79"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null
+            },
+            "name": "mainview",
+            "designerId": "8c8391fa-cc41-48e9-9ab8-f9e59689c829",
+            "masterInstanceId": "09152783-aadf-4f55-96e3-3f1a47193a34"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "width": null
+            },
+            "name": "hamburgermenu",
+            "designerId": "651e43e5-fc56-4b7e-99d8-d118f313f14c",
+            "masterInstanceId": "7012232f-f505-4a5b-82ea-f93041052b47"
+        }
+    ]
+}

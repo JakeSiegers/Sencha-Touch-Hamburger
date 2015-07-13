@@ -1,0 +1,21 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "name": "SenchaHamburger",
+        "stores": [
+            "MenuStore"
+        ],
+        "views": [
+            "HamburgerMenu",
+            "MainView",
+            "Viewport"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

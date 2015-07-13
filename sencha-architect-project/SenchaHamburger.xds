@@ -1,0 +1,57 @@
+{
+    "name": "SenchaHamburger",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "http://dev.local/sencha-hamburger/",
+        "exportPath": "L:/sencha-hamburger",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "installStatus": "Not Installed"
+    },
+    "xdsVersion": "3.2.0",
+    "xdsBuild": 193,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "touch24",
+    "viewOrderMap": {
+        "view": [
+            "74357486-26ea-4d4a-a7ca-1743f854ef9c",
+            "7012232f-f505-4a5b-82ea-f93041052b47",
+            "09152783-aadf-4f55-96e3-3f1a47193a34"
+        ],
+        "store": [
+            "7b282a87-84ff-4d84-bd08-3bbe9b7fecf0"
+        ],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "9b62d2d3-f863-47cd-9094-0531bf481be5",
+            "dad14c85-c4c2-4149-a24b-a04f34a710f1",
+            "6d068b0e-bc49-4f85-acbd-a0d70c61c479",
+            "33357ea9-d1aa-411d-8537-a7cd1d422a6f"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

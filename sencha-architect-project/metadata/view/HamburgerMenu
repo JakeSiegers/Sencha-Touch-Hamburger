@@ -1,0 +1,191 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "hamburger-content-menu"
+        ],
+        "designer|userAlias": "hamburgermenu",
+        "designer|userClassName": "HamburgerMenu",
+        "itemId": "HamburgerMenu",
+        "layout": "fit",
+        "scrollable": null,
+        "style": null
+    },
+    "name": "MyContainer",
+    "configAlternates": {
+        "style": "object"
+    },
+    "designerId": "7012232f-f505-4a5b-82ea-f93041052b47",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "blur-container"
+                ],
+                "itemId": "blurBackground"
+            },
+            "name": "MyContainer1",
+            "designerId": "c67256c8-cf64-4c8c-bb83-15da4591925e",
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "blur"
+                        ],
+                        "height": null,
+                        "src": "https://download.unsplash.com/photo-1425136738262-212551713a58"
+                    },
+                    "name": "MyImg1",
+                    "designerId": "9cb35732-bb28-43cc-8ede-e37f356a96f0"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "menu-content"
+                ],
+                "itemId": "menuContent",
+                "layout": null,
+                "scrollable": "vertical"
+            },
+            "name": "MyContainer",
+            "designerId": "9dd943b9-c608-4bf9-aa0f-68800df0f31e",
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "menu-face"
+                        ],
+                        "docked": null,
+                        "height": null,
+                        "src": "https://download.unsplash.com/photo-1416400453940-65c69d70ad91"
+                    },
+                    "name": "MyImg",
+                    "designerId": "6b5eacc8-75df-42cd-86ff-1cb140bf2f89"
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "menu-name"
+                        ],
+                        "html": "The Bird",
+                        "itemId": "menuName"
+                    },
+                    "name": "MyContainer3",
+                    "designerId": "a9ef83d4-b3bc-4590-917f-ee7d2706b124"
+                },
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "menu-list"
+                        ],
+                        "height": 600,
+                        "itemId": "mylist",
+                        "minHeight": null,
+                        "scrollable": false,
+                        "store": "MenuStore",
+                        "style": [
+                            "{",
+                            "'overflow':'visable'",
+                            "}"
+                        ],
+                        "variableHeights": null
+                    },
+                    "name": "MyList",
+                    "configAlternates": {
+                        "style": "object"
+                    },
+                    "designerId": "c232b435-5ebc-4415-869f-d1b4926d8dd7",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "scrollable",
+                            "type": "boolean"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div><span class=\"fa-stack fa-lg\">",
+                                    "  <i class=\"fa fa-circle fa-stack-2x\" style=\"color:rgba(0,0,0,0.1);\"></i>",
+                                    "  <i class=\"fa fa-{icon} fa-stack-1x\"></i>",
+                                    "</span> {text}</div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "e309d122-323c-48ed-97dc-a2201dd8cf76"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMylistItemTap",
+                                "implHandler": [
+                                    "dataview.deselectAll();",
+                                    "Ext.ComponentQuery.query(\"#MainView\")[0].menuOptionSelected(record);"
+                                ],
+                                "name": "itemtap"
+                            },
+                            "name": "onMylistItemTap",
+                            "designerId": "c639554d-60b9-4d3f-b143-479260276a51"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

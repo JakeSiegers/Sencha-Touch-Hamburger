@@ -1,0 +1,127 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "hamburger-content-overlay"
+        ],
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": "MainView",
+        "layout": "fit"
+    },
+    "name": "MyContainer2",
+    "designerId": "09152783-aadf-4f55-96e3-3f1a47193a34",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "itemId": null,
+                "title": "Sencha Hamburger"
+            },
+            "name": "MyToolbar",
+            "designerId": "ba6cfcb3-076c-4a01-aa78-cb860d650f5b",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": null,
+                        "itemId": "hamburgerBtn",
+                        "text": "<i class=\"fa fa-bars\"></i>"
+                    },
+                    "name": "MyButton",
+                    "designerId": "b63f6d1a-7036-48ae-9551-03591cd2fef9",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onHamburgerBtnTap",
+                                "implHandler": [
+                                    "this.openHamburgerMenu();"
+                                ],
+                                "name": "tap"
+                            },
+                            "name": "onHamburgerBtnTap",
+                            "designerId": "93ad97a8-422e-46f8-ae5f-659f910003f1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openHamburgerMenu",
+                "implHandler": [
+                    "this.removeCls('in');",
+                    "this.addCls('out');",
+                    "Ext.ComponentQuery.query('#hamburgerMask')[0].show();"
+                ]
+            },
+            "name": "openHamburgerMenu",
+            "designerId": "44cdbe15-3fb5-41d8-8210-b8fecccd13f5"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "closeHamburgerMenu",
+                "implHandler": [
+                    "this.removeCls('out');",
+                    "this.addCls('in');",
+                    "Ext.ComponentQuery.query('#hamburgerMask')[0].hide();"
+                ]
+            },
+            "name": "closeHamburgerMenu",
+            "designerId": "9f96be10-8c5e-4f58-8641-c8eb8e88966e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "menuOptionSelected",
+                "implHandler": [
+                    "this.closeHamburgerMenu();"
+                ]
+            },
+            "name": "menuOptionSelected",
+            "designerId": "5c26bafb-675a-4812-a1e5-01fea52ad270"
+        }
+    ]
+}

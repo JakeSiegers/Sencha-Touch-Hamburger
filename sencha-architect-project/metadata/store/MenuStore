@@ -1,0 +1,79 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        \"text\": \"Menu 1\",",
+            "        \"icon\": \"bolt\"",
+            "       ",
+            "    },",
+            "    {",
+            "        \"text\": \"Menu 2\",",
+            "        \"icon\": \"tachometer\"",
+            "    },",
+            "    {",
+            "        \"text\": \"Menu 3\",",
+            "        \"icon\": \"compass\"",
+            "    },",
+            "    {",
+            "        \"text\": \"Menu 4\",",
+            "        \"icon\": \"compass\"",
+            "    },",
+            "    {",
+            "        \"text\": \"Menu 5\",",
+            "        \"icon\": \"compass\"",
+            "    },",
+            "    {",
+            "        \"text\": \"Menu 6\",",
+            "        \"icon\": \"compass\"",
+            "    },",
+            "    {",
+            "        \"text\": \"Menu 7\",",
+            "        \"icon\": \"compass\"",
+            "    },",
+            "    {",
+            "        \"text\": \"Menu 8\",",
+            "        \"icon\": \"compass\"",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "MenuStore",
+        "storeId": "MenuStore"
+    },
+    "name": "MyJsonStore",
+    "designerId": "7b282a87-84ff-4d84-bd08-3bbe9b7fecf0",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text"
+            },
+            "name": "field",
+            "designerId": "c3d4d298-6b4b-46ed-82a3-c8df778e86c3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "icon"
+            },
+            "name": "field1",
+            "designerId": "2eec5fc5-ab3d-45f6-8473-f141af62f248"
+        }
+    ]
+}

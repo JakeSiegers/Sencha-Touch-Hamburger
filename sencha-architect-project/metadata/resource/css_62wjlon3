@@ -1,0 +1,14 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css_62wjlon3",
+        "url": "resources/hamburger/hamburger.css"
+    },
+    "name": "css1",
+    "designerId": "6d068b0e-bc49-4f85-acbd-a0d70c61c479"
+}
