@@ -60,6 +60,9 @@ Ext.define('SenchaHamburger.view.MainView', {
     },
 
     closeHamburgerMenu: function() {
+        if(!this.element.hasCls('out')){
+            return;
+        }
         this.removeCls('out');
         this.addCls('in');
         Ext.ComponentQuery.query('#hamburgerMask')[0].hide();

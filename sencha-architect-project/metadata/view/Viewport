@@ -26,31 +26,11 @@
                     "hamburger-mask"
                 ],
                 "hidden": true,
-                "itemId": "hamburgerMask"
+                "itemId": "hamburgerMask",
+                "showAnimation": "fade"
             },
             "name": "MyContainer4",
-            "designerId": "1240c359-13ed-4668-8e74-2760e4266e06",
-            "cn": [
-                {
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fn": "onHamburgerMaskShow",
-                        "implHandler": [
-                            "component.element.on({",
-                            "    touchstart: function() { Ext.ComponentQuery.query('#MainView')[0].closeHamburgerMenu(); }",
-                            "});"
-                        ],
-                        "name": "show"
-                    },
-                    "name": "onHamburgerMaskShow",
-                    "designerId": "5cb56566-9aa1-4de0-b1b1-7b0da0af2b79"
-                }
-            ]
+            "designerId": "1240c359-13ed-4668-8e74-2760e4266e06"
         },
         {
             "type": "linkedinstance",
@@ -79,6 +59,28 @@
             "name": "hamburgermenu",
             "designerId": "651e43e5-fc56-4b7e-99d8-d118f313f14c",
             "masterInstanceId": "7012232f-f505-4a5b-82ea-f93041052b47"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViewportInitialize",
+                "implHandler": [
+                    "//Create the listener for the hamburger mask (As it's not a button that can handle itself!)",
+                    "var MainView = Ext.ComponentQuery.query('#MainView')[0];",
+                    "Ext.ComponentQuery.query(\"#hamburgerMask\")[0].element.addListener({",
+                    "    touchstart: function() { MainView.closeHamburgerMenu(); },",
+                    "    tap: function() { MainView.closeHamburgerMenu(); }",
+                    "});"
+                ],
+                "name": "initialize"
+            },
+            "name": "onViewportInitialize",
+            "designerId": "cd909149-7b51-481a-acd3-be4385a7c310"
         }
     ]
 }

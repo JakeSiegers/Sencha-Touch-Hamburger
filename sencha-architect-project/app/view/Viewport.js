@@ -30,7 +30,8 @@ Ext.define('SenchaHamburger.view.Viewport', {
                 xtype: 'container',
                 cls: 'hamburger-mask',
                 hidden: true,
-                itemId: 'hamburgerMask'
+                itemId: 'hamburgerMask',
+                showAnimation: 'fade'
             },
             {
                 xtype: 'mainview'
@@ -41,16 +42,18 @@ Ext.define('SenchaHamburger.view.Viewport', {
         ],
         listeners: [
             {
-                fn: 'onHamburgerMaskShow',
-                event: 'show',
-                delegate: '#hamburgerMask'
+                fn: 'onViewportInitialize',
+                event: 'initialize'
             }
         ]
     },
 
-    onHamburgerMaskShow: function(component, eOpts) {
-        component.element.on({
-            touchstart: function() { Ext.ComponentQuery.query('#MainView')[0].closeHamburgerMenu(); }
+    onViewportInitialize: function(component, eOpts) {
+        //Create the listener for the hamburger mask (As it's not a button that can handle itself!)
+        var MainView = Ext.ComponentQuery.query('#MainView')[0];
+        Ext.ComponentQuery.query("#hamburgerMask")[0].element.addListener({
+            touchstart: function() { MainView.closeHamburgerMenu(); },
+            tap: function() { MainView.closeHamburgerMenu(); }
         });
     }
 
